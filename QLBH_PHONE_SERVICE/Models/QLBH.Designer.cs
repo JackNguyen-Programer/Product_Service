@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\DCT111x\2015\HKI\WebService\Project\QLBH_PHONE_SERVICE\QLBH_PHONE_SERVICE\Models\QLBH_PHONE.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\DCT111x\2015\HKI\WebService\Project\Product_Service\QLBH_PHONE_SERVICE\Models\QLBH.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

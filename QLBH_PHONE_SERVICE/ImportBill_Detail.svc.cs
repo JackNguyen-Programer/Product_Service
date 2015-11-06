@@ -18,7 +18,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var my_data = (data.import_bill_detail.Select(p => p)).ToList();
                     return my_data;
@@ -35,7 +35,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var my_data = data.import_bill_detail.AsNoTracking()
                         .Where(s => s.id_product == productId).ToList();
@@ -53,7 +53,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var my_data = data.import_bill_detail.AsNoTracking()
                         .Where(s => s.id_import_bill == importBillId).ToList();
@@ -71,7 +71,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var my_data = data.import_bill_detail.First(s => s.id_product == productId && s.id_import_bill == importBillId);
                     return my_data;
@@ -87,7 +87,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     data.import_bill_detail.Add(i);
                     data.SaveChanges();
@@ -105,7 +105,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {                          
                     data.Entry(i).State = EntityState.Modified;
                     data.SaveChanges();
@@ -125,7 +125,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var li = data.import_bill_detail.Where(i => i.id_product == id_product).ToList();
                     if (li == null) return true;
@@ -147,7 +147,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_Entity data = new QLBH_PHONE_Entity())
                 {
                     var li = data.import_bill_detail.Where(i => i.id_import_bill == id_import).ToList();
                     if (li == null) return true;

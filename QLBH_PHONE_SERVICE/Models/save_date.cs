@@ -14,31 +14,22 @@ namespace QLBH_PHONE_SERVICE.Models
     using System.Collections.Generic;
     
     [DataContract(IsReference = true)]
-    [KnownType(typeof(product))]
-    [KnownType(typeof(save_date))]
+    [KnownType(typeof(save))]
     
-    public partial class save
+    public partial class save_date
     {
-        public save()
-        {
-            this.products = new HashSet<product>();
-            this.save_date = new HashSet<save_date>();
-        }
-    
     	[DataMember]
         public int id { get; set; }
     	[DataMember]
-        public string name { get; set; }
+        public int id_save { get; set; }
     	[DataMember]
-        public int percent_save { get; set; }
+        public System.DateTime date_start { get; set; }
     	[DataMember]
-        public string content_save { get; set; }
+        public System.DateTime date_end { get; set; }
     	[DataMember]
-        public string image { get; set; }
+        public string content { get; set; }
     
     	[DataMember]
-        public virtual ICollection<product> products { get; set; }
-    	[DataMember]
-        public virtual ICollection<save_date> save_date { get; set; }
+        public virtual save save { get; set; }
     }
 }

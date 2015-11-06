@@ -11,28 +11,25 @@ namespace QLBH_PHONE_SERVICE.Models
 {
     using System;
     using System.Data.Entity.Core.Objects;
-    //using System.Data.Entity.Core.Objects.;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Linq;
-    //using System.Data.Objects;
-    //using System.Data.Objects.
     
-    public partial class QLBH_PHONE_Entities : DbContext
+    public partial class QLBH_PHONE_Entity : DbContext
     {
-    	public QLBH_PHONE_Entities()
+    	public QLBH_PHONE_Entity()
             : this(false) { }
     
-        public QLBH_PHONE_Entities(bool proxyCreationEnabled)
-            : base("name=QLBH_PHONE_Entities")
+        public QLBH_PHONE_Entity(bool proxyCreationEnabled)
+            : base("name=QLBH_PHONE_Entity")
         {
     		        this.Configuration.ProxyCreationEnabled = proxyCreationEnabled;
         }
     	
-        public QLBH_PHONE_Entities(string connectionString)
+        public QLBH_PHONE_Entity(string connectionString)
           : this(connectionString, false) { }
     	  
-        public QLBH_PHONE_Entities(string connectionString, bool proxyCreationEnabled)
+        public QLBH_PHONE_Entity(string connectionString, bool proxyCreationEnabled)
             : base(connectionString)
         {
     		        this.Configuration.ProxyCreationEnabled = proxyCreationEnabled;
@@ -56,6 +53,7 @@ namespace QLBH_PHONE_SERVICE.Models
         public virtual DbSet<product> products { get; set; }
         public virtual DbSet<role> roles { get; set; }
         public virtual DbSet<save> saves { get; set; }
+        public virtual DbSet<save_date> save_date { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<user> users { get; set; }
     
@@ -63,10 +61,10 @@ namespace QLBH_PHONE_SERVICE.Models
         {
             var diagramnameParameter = diagramname != null ?
                 new ObjectParameter("diagramname", diagramname) :
-                new System.Data.Entity.Core.Objects.ObjectParameter("diagramname", typeof(string));
+                new ObjectParameter("diagramname", typeof(string));
     
             var owner_idParameter = owner_id.HasValue ?
-                new System.Data.Entity.Core.Objects.ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", owner_id) :
                 new ObjectParameter("owner_id", typeof(int));
     
             var versionParameter = version.HasValue ?
