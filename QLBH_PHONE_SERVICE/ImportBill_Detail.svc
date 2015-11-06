@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="QLBH_PHONE_SERVICE.ImportBill_Detail" CodeBehind="ImportBill_Detail.svc.cs" %>
