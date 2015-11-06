@@ -1,1 +1,2 @@
 ﻿<%@ ServiceHost Language="C#" Debug="true" Service="QLBH_PHONE_SERVICE.Role" CodeBehind="Role.svc.cs" %>
+/* update by Nhat */

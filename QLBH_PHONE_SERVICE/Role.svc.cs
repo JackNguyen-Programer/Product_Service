@@ -7,7 +7,7 @@ using System.Text;
 using QLBH_PHONE_SERVICE.Models;
 using System.Diagnostics;
 using System.Data.Entity;
-
+/*Update by Nhat*/
 namespace QLBH_PHONE_SERVICE
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Role" in code, svc and config file together.

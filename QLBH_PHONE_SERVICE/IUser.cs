@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using QLBH_PHONE_SERVICE.Models;
-
+/*update by Nhat*/
 namespace QLBH_PHONE_SERVICE
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IUser" in both code and config file together.
