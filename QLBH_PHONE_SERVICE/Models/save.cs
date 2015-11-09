@@ -15,14 +15,12 @@ namespace QLBH_PHONE_SERVICE.Models
     
     [DataContract(IsReference = true)]
     [KnownType(typeof(product))]
-    [KnownType(typeof(save_date))]
     
     public partial class save
     {
         public save()
         {
             this.products = new HashSet<product>();
-            this.save_date = new HashSet<save_date>();
         }
     
     	[DataMember]
@@ -33,12 +31,8 @@ namespace QLBH_PHONE_SERVICE.Models
         public int percent_save { get; set; }
     	[DataMember]
         public string content_save { get; set; }
-    	[DataMember]
-        public string image { get; set; }
     
     	[DataMember]
         public virtual ICollection<product> products { get; set; }
-    	[DataMember]
-        public virtual ICollection<save_date> save_date { get; set; }
     }
 }

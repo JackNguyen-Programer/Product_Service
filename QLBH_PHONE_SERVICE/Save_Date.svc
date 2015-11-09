@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="QLBH_PHONE_SERVICE.Save_Date" CodeBehind="Save_Date.svc.cs" %>

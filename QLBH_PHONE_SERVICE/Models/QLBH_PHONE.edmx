@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLBH_PHONE_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLBH_PHONE_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="export_bill">
           <Key>
             <PropertyRef Name="id" />
@@ -85,18 +85,6 @@
           <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="percent_save" Type="int" Nullable="false" />
           <Property Name="content_save" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="image" Type="nvarchar" MaxLength="255" Nullable="false" />
-        </EntityType>
-        <EntityType Name="save_date">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="id_save" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="id_save" Type="int" Nullable="false" />
-          <Property Name="date_start" Type="datetime" Nullable="false" />
-          <Property Name="date_end" Type="datetime" Nullable="false" />
-          <Property Name="content" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -216,18 +204,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_save_date_save">
-          <End Role="save" Type="Self.save" Multiplicity="1" />
-          <End Role="save_date" Type="Self.save_date" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="save">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="save_date">
-              <PropertyRef Name="id_save" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_user_role">
           <End Role="role" Type="Self.role" Multiplicity="1" />
           <End Role="user" Type="Self.user" Multiplicity="*" />
@@ -280,7 +256,6 @@
           <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="save" EntityType="Self.save" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="save_date" EntityType="Self.save_date" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_export_bill_detail_export_bill" Association="Self.FK_export_bill_detail_export_bill">
@@ -314,10 +289,6 @@
           <AssociationSet Name="FK_product_save" Association="Self.FK_product_save">
             <End Role="save" EntitySet="save" />
             <End Role="product" EntitySet="product" />
-          </AssociationSet>
-          <AssociationSet Name="FK_save_date_save" Association="Self.FK_save_date_save">
-            <End Role="save" EntitySet="save" />
-            <End Role="save_date" EntitySet="save_date" />
           </AssociationSet>
           <AssociationSet Name="FK_user_role" Association="Self.FK_user_role">
             <End Role="role" EntitySet="role" />
@@ -424,21 +395,7 @@
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="percent_save" Type="Int32" Nullable="false" />
           <Property Name="content_save" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="products" Relationship="Self.FK_product_save" FromRole="save" ToRole="product" />
-          <NavigationProperty Name="save_date" Relationship="Self.FK_save_date_save" FromRole="save" ToRole="save_date" />
-        </EntityType>
-        <EntityType Name="save_date">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="id_save" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_save" Type="Int32" Nullable="false" />
-          <Property Name="date_start" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="date_end" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="save" Relationship="Self.FK_save_date_save" FromRole="save_date" ToRole="save" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -572,19 +529,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_save_date_save">
-          <End Role="save" Type="Self.save" Multiplicity="1" />
-          <End Role="save_date" Type="Self.save_date" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="save">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="save_date">
-              <PropertyRef Name="id_save" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="QLBH_PHONE_Entity" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLBH_PHONE_Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="export_bill" EntityType="Self.export_bill" />
           <EntitySet Name="export_bill_detail" EntityType="Self.export_bill_detail" />
           <EntitySet Name="import_bill" EntityType="Self.import_bill" />
@@ -593,7 +538,6 @@
           <EntitySet Name="products" EntityType="Self.product" />
           <EntitySet Name="roles" EntityType="Self.role" />
           <EntitySet Name="saves" EntityType="Self.save" />
-          <EntitySet Name="save_date" EntityType="Self.save_date" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="users" EntityType="Self.user" />
           <AssociationSet Name="FK_export_bill_detail_export_bill" Association="Self.FK_export_bill_detail_export_bill">
@@ -631,10 +575,6 @@
           <AssociationSet Name="FK_user_role" Association="Self.FK_user_role">
             <End Role="role" EntitySet="roles" />
             <End Role="user" EntitySet="users" />
-          </AssociationSet>
-          <AssociationSet Name="FK_save_date_save" Association="Self.FK_save_date_save">
-            <End Role="save" EntitySet="saves" />
-            <End Role="save_date" EntitySet="save_date" />
           </AssociationSet>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -683,7 +623,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLBH_PHONE_ModelStoreContainer" CdmEntityContainer="QLBH_PHONE_Entity">
+        <EntityContainerMapping StorageEntityContainer="QLBH_PHONE_ModelStoreContainer" CdmEntityContainer="QLBH_PHONE_Entities">
           <EntitySetMapping Name="export_bill">
             <EntityTypeMapping TypeName="QLBH_PHONE_Model.export_bill">
               <MappingFragment StoreEntitySet="export_bill">
@@ -768,18 +708,6 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="percent_save" ColumnName="percent_save" />
                 <ScalarProperty Name="content_save" ColumnName="content_save" />
-                <ScalarProperty Name="image" ColumnName="image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="save_date">
-            <EntityTypeMapping TypeName="QLBH_PHONE_Model.save_date">
-              <MappingFragment StoreEntitySet="save_date">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="id_save" ColumnName="id_save" />
-                <ScalarProperty Name="date_start" ColumnName="date_start" />
-                <ScalarProperty Name="date_end" ColumnName="date_end" />
-                <ScalarProperty Name="content" ColumnName="content" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -847,7 +775,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
