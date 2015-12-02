@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="778c7dd7-cbf6-477a-84bf-e3d7f89fb2c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:35139/Save.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Save.xsd" MetadataType="Schema" ID="1303c338-21d8-4cef-b595-a60ac3ca2866" SourceId="1" SourceUrl="http://localhost:35139/Save.svc?xsd=xsd1" />
+    <MetadataFile FileName="Save1.xsd" MetadataType="Schema" ID="56c4c046-342d-41bc-b03c-83ee4ce6e2bb" SourceId="1" SourceUrl="http://localhost:35139/Save.svc?xsd=xsd0" />
+    <MetadataFile FileName="Save.disco" MetadataType="Disco" ID="96c44f8b-d14a-4f87-afe7-9af8293febe2" SourceId="1" SourceUrl="http://localhost:35139/Save.svc?disco" />
+    <MetadataFile FileName="Save.wsdl" MetadataType="Wsdl" ID="12babcca-b3ae-4bde-b45c-43b7a33b8506" SourceId="1" SourceUrl="http://localhost:35139/Save.svc?wsdl" />
+    <MetadataFile FileName="Save2.xsd" MetadataType="Schema" ID="45197eb2-0cc6-41df-ac9e-989ab55811cb" SourceId="1" SourceUrl="http://localhost:35139/Save.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

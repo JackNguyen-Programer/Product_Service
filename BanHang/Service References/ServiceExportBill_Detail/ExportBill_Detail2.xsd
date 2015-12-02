@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:35139/ExportBill_Detail.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" />
+  <xs:element name="GetAllExportBill_Detail">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllExportBill_DetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="GetAllExportBill_DetailResult" nillable="true" type="q1:ArrayOfexport_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByIdProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByIdProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="GetExportBill_DetailByIdProductResult" nillable="true" type="q2:ArrayOfexport_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByIdExportBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exportBillId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByIdExportBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="GetExportBill_DetailByIdExportBillResult" nillable="true" type="q3:ArrayOfexport_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByBothId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+        <xs:element minOccurs="0" name="exportBillId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportBill_DetailByBothIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="GetExportBill_DetailByBothIdResult" nillable="true" type="q4:export_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddExportBill_Detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="eb" nillable="true" type="q5:export_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddExportBill_DetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddExportBill_DetailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportBill_Detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" minOccurs="0" name="eb" nillable="true" type="q6:export_bill_detail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportBill_DetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateExportBill_DetailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExportBill_DatailByBothId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idP" type="xs:int" />
+        <xs:element minOccurs="0" name="idE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExportBill_DatailByBothIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteExportBill_DatailByBothIdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

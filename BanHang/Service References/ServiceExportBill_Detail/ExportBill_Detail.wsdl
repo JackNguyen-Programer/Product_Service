@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExportBill_Detail" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill_Detail.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill_Detail.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill_Detail.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExportBill_Detail_GetAllExportBill_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportBill_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetAllExportBill_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportBill_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByIdProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByIdProduct" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByIdProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByIdProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByIdExportBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByIdExportBill" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByIdExportBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByIdExportBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByBothId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByBothId" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_GetExportBill_DetailByBothId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBill_DetailByBothIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_AddExportBill_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExportBill_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_AddExportBill_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExportBill_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_UpdateExportBill_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportBill_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_UpdateExportBill_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportBill_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_DeleteExportBill_DatailByBothId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportBill_DatailByBothId" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_Detail_DeleteExportBill_DatailByBothId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportBill_DatailByBothIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExportBill_Detail">
+    <wsdl:operation name="GetAllExportBill_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/GetAllExportBill_Detail" message="tns:IExportBill_Detail_GetAllExportBill_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/GetAllExportBill_DetailResponse" message="tns:IExportBill_Detail_GetAllExportBill_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByIdProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdProduct" message="tns:IExportBill_Detail_GetExportBill_DetailByIdProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdProductResponse" message="tns:IExportBill_Detail_GetExportBill_DetailByIdProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByIdExportBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdExportBill" message="tns:IExportBill_Detail_GetExportBill_DetailByIdExportBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdExportBillResponse" message="tns:IExportBill_Detail_GetExportBill_DetailByIdExportBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByBothId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByBothId" message="tns:IExportBill_Detail_GetExportBill_DetailByBothId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByBothIdResponse" message="tns:IExportBill_Detail_GetExportBill_DetailByBothId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExportBill_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/AddExportBill_Detail" message="tns:IExportBill_Detail_AddExportBill_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/AddExportBill_DetailResponse" message="tns:IExportBill_Detail_AddExportBill_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportBill_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/UpdateExportBill_Detail" message="tns:IExportBill_Detail_UpdateExportBill_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/UpdateExportBill_DetailResponse" message="tns:IExportBill_Detail_UpdateExportBill_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExportBill_DatailByBothId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill_Detail/DeleteExportBill_DatailByBothId" message="tns:IExportBill_Detail_DeleteExportBill_DatailByBothId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill_Detail/DeleteExportBill_DatailByBothIdResponse" message="tns:IExportBill_Detail_DeleteExportBill_DatailByBothId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExportBill_Detail" type="tns:IExportBill_Detail">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllExportBill_Detail">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/GetAllExportBill_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByIdProduct">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByIdExportBill">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByIdExportBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBill_DetailByBothId">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/GetExportBill_DetailByBothId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExportBill_Detail">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/AddExportBill_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportBill_Detail">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/UpdateExportBill_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExportBill_DatailByBothId">
+      <soap:operation soapAction="http://tempuri.org/IExportBill_Detail/DeleteExportBill_DatailByBothId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExportBill_Detail">
+    <wsdl:port name="BasicHttpBinding_IExportBill_Detail" binding="tns:BasicHttpBinding_IExportBill_Detail">
+      <soap:address location="http://localhost:35139/ExportBill_Detail.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

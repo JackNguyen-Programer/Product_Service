@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="68d67e66-919d-406c-8e6d-3192facd8f6b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:35139/Save_Date.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Save_Date.wsdl" MetadataType="Wsdl" ID="3e897a71-ee7c-4b5f-9e99-b1221925282e" SourceId="1" SourceUrl="http://localhost:35139/Save_Date.svc?wsdl" />
+    <MetadataFile FileName="Save_Date.xsd" MetadataType="Schema" ID="b3d9fcfb-d9a9-4108-a12a-9a3d6b44b7ca" SourceId="1" SourceUrl="http://localhost:35139/Save_Date.svc?xsd=xsd2" />
+    <MetadataFile FileName="Save_Date1.xsd" MetadataType="Schema" ID="dbacb3b6-45ab-4458-9909-60a10b60aafb" SourceId="1" SourceUrl="http://localhost:35139/Save_Date.svc?xsd=xsd0" />
+    <MetadataFile FileName="Save_Date2.xsd" MetadataType="Schema" ID="a844bdf8-4ed3-43d2-a8b8-4021e1c26d27" SourceId="1" SourceUrl="http://localhost:35139/Save_Date.svc?xsd=xsd1" />
+    <MetadataFile FileName="Save_Date.disco" MetadataType="Disco" ID="a92b6b0e-3f90-4929-84f0-dfc6b7352c88" SourceId="1" SourceUrl="http://localhost:35139/Save_Date.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0efd0d35-62b1-45d6-9334-10edd2c6832e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:35139/ExportBill.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExportBill.xsd" MetadataType="Schema" ID="3a036c9e-8691-4669-a3e3-e2db634d7235" SourceId="1" SourceUrl="http://localhost:35139/ExportBill.svc?xsd=xsd0" />
+    <MetadataFile FileName="ExportBill.disco" MetadataType="Disco" ID="5da0f38a-afe2-4a1c-90c4-2c4da1066353" SourceId="1" SourceUrl="http://localhost:35139/ExportBill.svc?disco" />
+    <MetadataFile FileName="ExportBill.wsdl" MetadataType="Wsdl" ID="fba0cdb2-2229-4ab1-bb20-ad44de66b374" SourceId="1" SourceUrl="http://localhost:35139/ExportBill.svc?wsdl" />
+    <MetadataFile FileName="ExportBill1.xsd" MetadataType="Schema" ID="609a2e5e-28bb-4776-8395-175889fc3e19" SourceId="1" SourceUrl="http://localhost:35139/ExportBill.svc?xsd=xsd2" />
+    <MetadataFile FileName="ExportBill2.xsd" MetadataType="Schema" ID="6a5c02f5-47a7-41ec-b942-2b520afe7242" SourceId="1" SourceUrl="http://localhost:35139/ExportBill.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

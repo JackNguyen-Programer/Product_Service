@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Save" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:35139/Save.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:35139/Save.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:35139/Save.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISave_GetAllSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSave" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetAllSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveWithId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveWithId" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveWithId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveWithIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveByDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveByDay" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveByDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveByDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveNotSaveDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveNotSaveDay" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveNotSaveDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveNotSaveDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveByIdAndDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveByIdAndDay" />
+  </wsdl:message>
+  <wsdl:message name="ISave_GetSaveByIdAndDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaveByIdAndDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_AddSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSave" />
+  </wsdl:message>
+  <wsdl:message name="ISave_AddSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UpdateSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSave" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UpdateSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_DeleteSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSave" />
+  </wsdl:message>
+  <wsdl:message name="ISave_DeleteSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISave">
+    <wsdl:operation name="GetAllSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/GetAllSave" message="tns:ISave_GetAllSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/GetAllSaveResponse" message="tns:ISave_GetAllSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveWithId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/GetSaveWithId" message="tns:ISave_GetSaveWithId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/GetSaveWithIdResponse" message="tns:ISave_GetSaveWithId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveByDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/GetSaveByDay" message="tns:ISave_GetSaveByDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/GetSaveByDayResponse" message="tns:ISave_GetSaveByDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveNotSaveDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/GetSaveNotSaveDay" message="tns:ISave_GetSaveNotSaveDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/GetSaveNotSaveDayResponse" message="tns:ISave_GetSaveNotSaveDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveByIdAndDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/GetSaveByIdAndDay" message="tns:ISave_GetSaveByIdAndDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/GetSaveByIdAndDayResponse" message="tns:ISave_GetSaveByIdAndDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/AddSave" message="tns:ISave_AddSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/AddSaveResponse" message="tns:ISave_AddSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/UpdateSave" message="tns:ISave_UpdateSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/UpdateSaveResponse" message="tns:ISave_UpdateSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/DeleteSave" message="tns:ISave_DeleteSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/DeleteSaveResponse" message="tns:ISave_DeleteSave_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISave" type="tns:ISave">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllSave">
+      <soap:operation soapAction="http://tempuri.org/ISave/GetAllSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveWithId">
+      <soap:operation soapAction="http://tempuri.org/ISave/GetSaveWithId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveByDay">
+      <soap:operation soapAction="http://tempuri.org/ISave/GetSaveByDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveNotSaveDay">
+      <soap:operation soapAction="http://tempuri.org/ISave/GetSaveNotSaveDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaveByIdAndDay">
+      <soap:operation soapAction="http://tempuri.org/ISave/GetSaveByIdAndDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSave">
+      <soap:operation soapAction="http://tempuri.org/ISave/AddSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSave">
+      <soap:operation soapAction="http://tempuri.org/ISave/UpdateSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSave">
+      <soap:operation soapAction="http://tempuri.org/ISave/DeleteSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Save">
+    <wsdl:port name="BasicHttpBinding_ISave" binding="tns:BasicHttpBinding_ISave">
+      <soap:address location="http://localhost:35139/Save.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

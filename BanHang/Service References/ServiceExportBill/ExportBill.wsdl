@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExportBill" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:35139/ExportBill.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QLBH_PHONE_SERVICE.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExportBill_GetAllExportBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportBill" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetAllExportBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillById" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByDateFromTo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByDateFromTo" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByDateFromTo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByDateFromToResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByEmailAndDateFromTo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByEmailAndDateFromTo" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetExportBillByEmailAndDateFromTo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportBillByEmailAndDateFromToResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetLastExportBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastExportBill" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_GetLastExportBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastExportBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_AddExportBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExportBill" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_AddExportBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExportBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_UpdateExportBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportBill" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_UpdateExportBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_DeleteExportBillById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportBillById" />
+  </wsdl:message>
+  <wsdl:message name="IExportBill_DeleteExportBillById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportBillByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExportBill">
+    <wsdl:operation name="GetAllExportBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetAllExportBill" message="tns:IExportBill_GetAllExportBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetAllExportBillResponse" message="tns:IExportBill_GetAllExportBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetExportBillById" message="tns:IExportBill_GetExportBillById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByIdResponse" message="tns:IExportBill_GetExportBillById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByEmail" message="tns:IExportBill_GetExportBillByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByEmailResponse" message="tns:IExportBill_GetExportBillByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByDateFromTo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByDateFromTo" message="tns:IExportBill_GetExportBillByDateFromTo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByDateFromToResponse" message="tns:IExportBill_GetExportBillByDateFromTo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByEmailAndDateFromTo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByEmailAndDateFromTo" message="tns:IExportBill_GetExportBillByEmailAndDateFromTo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetExportBillByEmailAndDateFromToResponse" message="tns:IExportBill_GetExportBillByEmailAndDateFromTo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastExportBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/GetLastExportBill" message="tns:IExportBill_GetLastExportBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/GetLastExportBillResponse" message="tns:IExportBill_GetLastExportBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExportBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/AddExportBill" message="tns:IExportBill_AddExportBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/AddExportBillResponse" message="tns:IExportBill_AddExportBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/UpdateExportBill" message="tns:IExportBill_UpdateExportBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/UpdateExportBillResponse" message="tns:IExportBill_UpdateExportBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExportBillById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportBill/DeleteExportBillById" message="tns:IExportBill_DeleteExportBillById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportBill/DeleteExportBillByIdResponse" message="tns:IExportBill_DeleteExportBillById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExportBill" type="tns:IExportBill">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllExportBill">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetAllExportBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillById">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetExportBillById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByEmail">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetExportBillByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByDateFromTo">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetExportBillByDateFromTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportBillByEmailAndDateFromTo">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetExportBillByEmailAndDateFromTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastExportBill">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/GetLastExportBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExportBill">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/AddExportBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportBill">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/UpdateExportBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExportBillById">
+      <soap:operation soapAction="http://tempuri.org/IExportBill/DeleteExportBillById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExportBill">
+    <wsdl:port name="BasicHttpBinding_IExportBill" binding="tns:BasicHttpBinding_IExportBill">
+      <soap:address location="http://localhost:35139/ExportBill.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

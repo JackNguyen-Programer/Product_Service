@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20d2c295-19d7-462f-9ce6-01fd8adf7163" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:35139/ImportBill_Detail.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImportBill_Detail.xsd" MetadataType="Schema" ID="424aa325-5a83-43bc-9e39-9881aba97ac6" SourceId="1" SourceUrl="http://localhost:35139/ImportBill_Detail.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImportBill_Detail1.xsd" MetadataType="Schema" ID="217ff833-de45-44bc-8d9a-549c726f4ccb" SourceId="1" SourceUrl="http://localhost:35139/ImportBill_Detail.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImportBill_Detail.wsdl" MetadataType="Wsdl" ID="95494f77-ca77-47c1-b89e-27da72d62ff5" SourceId="1" SourceUrl="http://localhost:35139/ImportBill_Detail.svc?wsdl" />
+    <MetadataFile FileName="ImportBill_Detail2.xsd" MetadataType="Schema" ID="ccda6a28-8fff-46c9-8842-d410d49985a3" SourceId="1" SourceUrl="http://localhost:35139/ImportBill_Detail.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImportBill_Detail.disco" MetadataType="Disco" ID="296a37a8-7c08-4838-baed-ad69770cf590" SourceId="1" SourceUrl="http://localhost:35139/ImportBill_Detail.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
