@@ -19,7 +19,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.First(s => s.id == id);
                     return my_product;
@@ -36,7 +36,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = (data.products.Select(p => p)).ToList();
       
@@ -54,7 +54,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     data.products.Add(product);
                     data.SaveChanges();
@@ -72,7 +72,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     //data.products.Attach(product);
                     //data.Entry(product).State = EntityState.Modified;
@@ -107,7 +107,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking()
                         .Where(p => p.name.ToUpper().Contains(n) || p.name.ToLower().Contains(n)).ToList();
@@ -125,7 +125,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking().Where(p => p.id_manufacturer == idManu).ToList();
                     return my_product;
@@ -142,7 +142,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking().Where(p => p.manufacturer.name == nameManu).ToList();
                     return my_product;
@@ -159,7 +159,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking()
                         .Where(p => p.id_manufacturer == idManu && p.name.Contains(namePro)).ToList();
@@ -177,7 +177,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking()
                         .Where(p => p.manufacturer.name == nManu || nManu == null).ToList();
@@ -196,7 +196,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking().OrderByDescending(p => p.id)
                         .Take(18).ToList();
@@ -214,7 +214,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_product = data.products.AsNoTracking()
                         .OrderByDescending(p => p.save.percent_save).Take(18).ToList();
@@ -233,7 +233,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var product = data.products.Single(p => p.id == id);
                     var exportBill_Detail = data.export_bill_detail.Where(e => e.id_product == id).ToList();

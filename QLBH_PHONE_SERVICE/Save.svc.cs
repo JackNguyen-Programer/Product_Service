@@ -18,7 +18,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_save = (data.saves.Select(p => p)).ToList();
                     return my_save;
@@ -35,7 +35,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_save = data.saves.First(s => s.id == id);
                     return my_save;
@@ -52,7 +52,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     data.saves.Add(s);
                     data.SaveChanges();
@@ -70,7 +70,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     //Test
                     var getItem = data.saves.Single(p => p.id == s.id);

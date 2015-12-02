@@ -77,7 +77,10 @@
     <Content Include="ImportBill_Detail.svc" />
     <Content Include="Manufacturer.svc" />
     <Content Include="Product.svc" />
+    <Content Include="Role.svc" />
     <Content Include="Save.svc" />
+    <Content Include="Save_Date.svc" />
+    <Content Include="User.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -101,91 +104,106 @@
       <DependentUpon>ImportBill_Detail.svc</DependentUpon>
     </Compile>
     <Compile Include="IProduct.cs" />
+    <Compile Include="IRole.cs" />
     <Compile Include="ISave.cs" />
+    <Compile Include="ISave_Date.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Manufacturer.svc.cs">
       <DependentUpon>Manufacturer.svc</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLBH_PHONE_WCF.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBH_PHONE_WCF.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLBH_PHONE_WCF.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\export_bill.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\export_bill_detail.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\import_bill.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\import_bill_detail.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\manufacturer.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\product.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLBH_PHONE.Designer.cs">
+    <Compile Include="Models\QLBH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLBH_PHONE.edmx</DependentUpon>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLBH_WCF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH_WCF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLBH_WCF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\role.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\save.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\save_date.cs">
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user.cs">
-      <DependentUpon>QLBH_PHONE_WCF.tt</DependentUpon>
+      <DependentUpon>QLBH_WCF.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.svc.cs">
       <DependentUpon>Product.svc</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.svc.cs">
+      <DependentUpon>Role.svc</DependentUpon>
+    </Compile>
     <Compile Include="Save.svc.cs">
       <DependentUpon>Save.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Save_Date.svc.cs">
+      <DependentUpon>Save_Date.svc</DependentUpon>
+    </Compile>
+    <Compile Include="User.svc.cs">
+      <DependentUpon>User.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\QLBH_PHONE.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLBH_PHONE.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QLBH_PHONE.edmx.diagram">
-      <DependentUpon>QLBH_PHONE.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\QLBH_PHONE_WCF.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLBH_PHONE_WCF.Context.cs</LastGenOutput>
-      <DependentUpon>QLBH_PHONE.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\QLBH_PHONE_WCF.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLBH_PHONE_WCF.cs</LastGenOutput>
-      <DependentUpon>QLBH_PHONE.edmx</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
+    <EntityDeploy Include="Models\QLBH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLBH.edmx.diagram">
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QLBH_WCF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLBH_WCF.Context.cs</LastGenOutput>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QLBH_WCF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLBH_WCF.cs</LastGenOutput>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

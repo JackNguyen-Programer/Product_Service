@@ -20,7 +20,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = (data.export_bill.Select(p => p)).ToList();
                     return my_data;
@@ -37,7 +37,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = data.export_bill.First(s => s.id == id);
                     return my_data;
@@ -54,7 +54,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     data.export_bill.Add(eb);
                     data.SaveChanges();
@@ -72,7 +72,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {                
                     data.Entry(eb).State = System.Data.Entity.EntityState.Modified;                  
                     data.SaveChanges();
@@ -91,7 +91,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = data.export_bill.AsNoTracking()
                         .Where(e => e.user.email.ToUpper().Contains(email) || e.user.email.ToLower().Contains(email)).ToList();
@@ -109,7 +109,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = data.export_bill.AsNoTracking()
                         .Where(e => e.date >= from && e.date <= to).ToList();
@@ -127,7 +127,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = data.export_bill.AsNoTracking()
                         .Where(e => e.date >= from && e.date <= to && e.user.email.Contains(email)).ToList();
@@ -145,7 +145,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var my_data = data.export_bill.AsNoTracking()
                         .OrderByDescending(e => e.id).First();
@@ -164,7 +164,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var listExport = data.export_bill.Where(e => e.id_user == idUser).ToList();
                     foreach (var item in listExport)
@@ -190,7 +190,7 @@ namespace QLBH_PHONE_SERVICE
         {
             try
             {
-                using (QLBH_PHONE_Entities data = new QLBH_PHONE_Entities())
+                using (QLBH_PHONE_ENTITY data = new QLBH_PHONE_ENTITY())
                 {
                     var export = data.export_bill.Single(e => e.id == id);
                     var exportBill_Detail = data.export_bill_detail.Where(e => e.id_export_bill == id).ToList();
