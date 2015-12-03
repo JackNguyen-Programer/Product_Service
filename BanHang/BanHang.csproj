@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,9 +106,23 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DonHangController.cs" />
+    <Compile Include="Controllers\TaiKhoanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DALChiTietDH.cs" />
+    <Compile Include="Models\DALChiTietDNH.cs" />
+    <Compile Include="Models\DALDonHang.cs" />
+    <Compile Include="Models\DALDonNhapHang.cs" />
+    <Compile Include="Models\DALKhachHang.cs" />
+    <Compile Include="Models\DALSanPham.cs" />
+    <Compile Include="Models\DALThongKe.cs" />
+    <Compile Include="Models\ExportBill.cs" />
+    <Compile Include="Models\ExportBillDetail.cs" />
+    <Compile Include="Models\ImportBill.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Save.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceUser\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -130,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\DonHang\" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +179,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
