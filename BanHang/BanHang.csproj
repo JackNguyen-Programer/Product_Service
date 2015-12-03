@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+<<<<<<< HEAD
     <Content Include="obj\Debug\BanHang.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\BanHang.dll" />
     <Content Include="obj\Debug\BanHang.pdb" />
@@ -92,6 +93,191 @@
     <Content Include="obj\Debug\BanHang.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\build.force" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+=======
+    <Content Include="Service References\ServiceExportBill\BanHang.ServiceExportBill.export_bill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceExportBill\ExportBill.disco" />
+    <None Include="Service References\ServiceExportBill\configuration91.svcinfo" />
+    <None Include="Service References\ServiceExportBill\configuration.svcinfo" />
+    <None Include="Service References\ServiceExportBill\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceExportBill_Detail\BanHang.ServiceExportBill_Detail.export_bill_detail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceExportBill\ExportBill.wsdl" />
+    <None Include="Service References\ServiceExportBill\ExportBill.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceExportBill\ExportBill1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceExportBill\ExportBill2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceExportBill_Detail\ExportBill_Detail.disco" />
+    <None Include="Service References\ServiceExportBill_Detail\configuration91.svcinfo" />
+    <None Include="Service References\ServiceExportBill_Detail\configuration.svcinfo" />
+    <None Include="Service References\ServiceExportBill_Detail\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceImportBill\BanHang.ServiceImportBill.export_bill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceExportBill_Detail\ExportBill_Detail.wsdl" />
+    <None Include="Service References\ServiceExportBill_Detail\ExportBill_Detail.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceExportBill_Detail\ExportBill_Detail1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceExportBill_Detail\ExportBill_Detail2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill\ExportBill.disco" />
+    <None Include="Service References\ServiceImportBill\configuration91.svcinfo" />
+    <None Include="Service References\ServiceImportBill\configuration.svcinfo" />
+    <None Include="Service References\ServiceImportBill\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceImportBill_Detail\BanHang.ServiceImportBill_Detail.import_bill_detail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceImportBill\ExportBill.wsdl" />
+    <None Include="Service References\ServiceImportBill\ExportBill.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill\ExportBill1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill\ExportBill2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill_Detail\ImportBill_Detail.disco" />
+    <None Include="Service References\ServiceImportBill_Detail\configuration91.svcinfo" />
+    <None Include="Service References\ServiceImportBill_Detail\configuration.svcinfo" />
+    <None Include="Service References\ServiceImportBill_Detail\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceManufacturer\BanHang.ServiceManufacturer.manufacturer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceImportBill_Detail\ImportBill_Detail.wsdl" />
+    <None Include="Service References\ServiceImportBill_Detail\ImportBill_Detail.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill_Detail\ImportBill_Detail1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceImportBill_Detail\ImportBill_Detail2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceManufacturer\Manufacturer.disco" />
+    <None Include="Service References\ServiceManufacturer\configuration91.svcinfo" />
+    <None Include="Service References\ServiceManufacturer\configuration.svcinfo" />
+    <None Include="Service References\ServiceManufacturer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceProduct\BanHang.ServiceProduct.product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceManufacturer\Manufacturer.wsdl" />
+    <None Include="Service References\ServiceManufacturer\Manufacturer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceManufacturer\Manufacturer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceManufacturer\Manufacturer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceProduct\Product.disco" />
+    <None Include="Service References\ServiceProduct\configuration91.svcinfo" />
+    <None Include="Service References\ServiceProduct\configuration.svcinfo" />
+    <None Include="Service References\ServiceProduct\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceRole\BanHang.ServiceRole.role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceProduct\Product.wsdl" />
+    <None Include="Service References\ServiceProduct\Product.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceProduct\Product1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceProduct\Product2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRole\Role.disco" />
+    <None Include="Service References\ServiceRole\configuration91.svcinfo" />
+    <None Include="Service References\ServiceRole\configuration.svcinfo" />
+    <None Include="Service References\ServiceRole\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceSaveDate\BanHang.ServiceSaveDate.save_date.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceRole\Role.wsdl" />
+    <None Include="Service References\ServiceRole\Role.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRole\Role1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRole\Role2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSaveDate\Save_Date.disco" />
+    <None Include="Service References\ServiceSaveDate\configuration91.svcinfo" />
+    <None Include="Service References\ServiceSaveDate\configuration.svcinfo" />
+    <None Include="Service References\ServiceSaveDate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceSave\BanHang.ServiceSave.save.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceSave\Save.disco" />
+    <None Include="Service References\ServiceSave\configuration91.svcinfo" />
+    <None Include="Service References\ServiceSave\configuration.svcinfo" />
+    <None Include="Service References\ServiceSave\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceUser\BanHang.ServiceUser.user.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceSaveDate\Save_Date.wsdl" />
+    <None Include="Service References\ServiceSaveDate\Save_Date.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSaveDate\Save_Date1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSaveDate\Save_Date2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSave\Save.wsdl" />
+    <None Include="Service References\ServiceSave\Save.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSave\Save1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSave\Save2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+>>>>>>> origin/master
     <None Include="Service References\ServiceUser\User.disco" />
     <None Include="Service References\ServiceUser\configuration91.svcinfo" />
     <None Include="Service References\ServiceUser\configuration.svcinfo" />
@@ -131,6 +317,51 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceExportBill\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceExportBill_Detail\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceImportBill\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceImportBill_Detail\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceManufacturer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceProduct\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRole\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceSaveDate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceSave\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceUser\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +398,15 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceExportBill\" />
+    <WCFMetadataStorage Include="Service References\ServiceExportBill_Detail\" />
+    <WCFMetadataStorage Include="Service References\ServiceImportBill\" />
+    <WCFMetadataStorage Include="Service References\ServiceImportBill_Detail\" />
+    <WCFMetadataStorage Include="Service References\ServiceManufacturer\" />
+    <WCFMetadataStorage Include="Service References\ServiceProduct\" />
+    <WCFMetadataStorage Include="Service References\ServiceRole\" />
+    <WCFMetadataStorage Include="Service References\ServiceSaveDate\" />
+    <WCFMetadataStorage Include="Service References\ServiceSave\" />
     <WCFMetadataStorage Include="Service References\ServiceUser\" />
   </ItemGroup>
   <PropertyGroup>

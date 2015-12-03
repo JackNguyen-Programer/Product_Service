@@ -1,0 +1,105 @@
+﻿@using BanHang.Models;
+@*@using Microsoft.WindowsAzure.Storage;
+@using Microsoft.WindowsAzure.Storage.Auth;
+@using Microsoft.WindowsAzure.Storage.Blob;
+@{
+    string accountName = "jacknguyenstorage";
+    string accountKey = "sJW7Q2K2XnLHkIEYnOiOakUjYHn8wzYmkwZEfqory5viNPkW9hptJl3w21fHhg5HlsChoe7HnlqKx0COWX8X9Q==";
+    try
+    {
+        StorageCredentials creds = new StorageCredentials(accountName, accountKey);
+        CloudStorageAccount account = new CloudStorageAccount(creds, useHttps: true);
+        CloudBlobClient client = account.CreateCloudBlobClient();
+        CloudBlobContainer container = client.GetContainerReference("storageqlbh");
+        //container.CreateIfNotExists();
+        CloudBlockBlob blob = container.GetBlockBlobReference("image1.png");
+        //using (Stream file = new FileStream("image1.png", FileMode.Create))
+        //{
+            //blob.DownloadToStream(file);
+            var n = blob.Uri;
+        //}
+
+    }
+    catch (Exception e)
+    {
+
+    }
+}*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mobile Shop Online</title>
+    <link href="~/Content/Site_Default.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main_container">
+        <div class="top_bar">
+            <div class="top_search">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+
+        <div id="header">
+            <img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/mobile-banner.jpg" width="1000" height="270" />
+        </div>
+        <nav>
+            <div id="menu_tab">
+                <ul class="menu">
+                    <li><a href="@Url.Action("Index", "SanPham") ">Trang Chủ</a>  </li>
+                    <li class="divider"></li>
+                    <li><a href="@Url.Action("Contact", "SanPham")">Liên Hệ</a></li>
+                    <li class="divider"></li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li> <a href="@Url.Action("Manage", "TaiKhoan")">Tài&nbspKhoản</a></li>
+                        <li class="divider"></li>
+                        <li> <a href="@Url.Action("Invoice", "DonHang")">Đơn Hàng</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Index", "DonHang")">Giỏ&nbspHàng</a></li>
+                        <li class="divider"></li>
+                    }
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="left_content">
+            @{ Html.RenderAction("SearchBox", "SanPham"); }
+            <div class="title_box">Đề xuất</div>
+                <ul class="left_menu">
+                    <li class="even"> <a href=@Url.Action("Save", "SanPham")>Khuyến mãi</a></li>
+                    <li class="even"> <a href=@Url.Action("NewProduct", "SanPham")>Sản phẩm mới</a></li>
+                    <li class="even"> <a href=@Url.Action("ProductSave", "SanPham", new { page = 1, id_save = 0})>Sản phẩm giảm giá</a></li>
+                </ul>
+            <div class="title_box">Hãng sản xuất</div>
+            <ul class="left_menu">
+                @{ Html.RenderAction("LeftMenu", "SanPham"); }
+            </ul>
+        </div>
+
+        <div class="center_content" style="font-size:14px">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="right_content">
+        @{Html.RenderAction("Summary", "DonHang");}
+
+        <img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/bann2.jpg" width="196" height="179" style="padding-top:10px" />
+    </div>
+</body>
+
+<div class="footer">
+    <div class="left_footer">
+
+        © 2012 - Mobile Shop Kênh bán hàng trực tuyến của Hệ thống Bán lẻ Mobile Shop trên toàn quốc<p> Công ty Thương mại và Xuất Nhập khẩu Mobile Shop <img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/Mobile_shop_logo.jpg" alt="" width="203" height="91" style="float:right" /></p>
+        <p>Trụ sở: Dãy A 273 An Dương Vương Q.5 TpHCM</p>
+        <p> Điện thoại hỗ trợ: 0462.567.777</p>
+        <p>Email hỗ trợ: <a href="mailto:hotro@mobileshop.vn">hotro@mobileshop.vn</a> </p>
+    </div>
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+</html>
