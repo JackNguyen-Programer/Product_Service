@@ -1,0 +1,16 @@
+﻿@if (Request.IsAuthenticated)
+{
+
+    <p style="margin-top:3px"> <img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/user_add.png" />Chào, <a href="@Url.Action("Manage", "TaiKhoan")" style="color:#CCC">@User.Identity.Name</a></p>
+    using (Html.BeginForm("LogOff", "TaiKhoan", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+        <a href="javascript:document.getElementById('logoutForm').submit()" style="color:#CCC"><img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/logout.png" width="16" />Đăng xuất</a>
+    }
+
+}
+else
+{
+    <p style="margin-top:3px">Chào, khách</p>
+    <p><a href="@Url.Action("Login","TaiKhoan")" style="color:#CCC;  ">Đăng nhập </a>  | <a href="@Url.Action("Register","TaiKhoan")" style="color:#CCC; ">Đăng ký</a></p>
+}
