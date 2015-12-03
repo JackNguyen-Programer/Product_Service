@@ -1,0 +1,33 @@
+﻿@model BanHang.ServiceUser.user
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="center_title_bar" style="font-size:15px; margin-bottom:10px">Đăng Nhập</div>
+
+<div class="register-box">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        <table width="580" height="200" border="0">
+            <tr>
+                <td width="107">Email</td>
+                <td width="473"><input type="text" name="email" size="35" /></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="pass" size="35" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input name="btnSubmit" type="submit" value="Đăng nhập" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">Chưa có tài khoản để mua hàng? <a href="@Url.Action("Register","TaiKhoan")" rel="nofollow">Đăng ký ngay!</a></td>
+            </tr>
+        </table>
+    }
+</div>

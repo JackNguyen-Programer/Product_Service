@@ -1,0 +1,32 @@
+﻿@*Chi tiết hoa đơn của người dùng*@
+@model IEnumerable<BanHang.Models.ExportBillDetail>
+
+@{
+    ViewBag.Title = "LineItem";
+}
+<div class="center_title_bar" style="font-size:15px">Chi tiết Đơn hàng </div>
+
+
+<table width="516" height="136" id="rounded-corner" style="text-align:center">
+    <thead>
+        <tr>
+            <th width="48" height="53" class="rounded" scope="col">#</th>
+            <th width="129" class="rounded" scope="col">Tên sản phẩm </th>
+            <th width="128" class="rounded" scope="col">Giá</th>
+            <th width="120" class="rounded" scope="col">Khuyến mãi</th>
+            <th width="42" class="rounded" scope="col">Số lượng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td height="71">@(Model.ToList().IndexOf(item) + 1)</td>
+                <td><a href="@Url.Action("Detail","SanPham", new {id= item.id_product })">@item.name_product</a></td>
+                <td><span class="rounded">@item.sale_price</span></td>
+                <td><a href="@Url.Action("SaveDetail", "SanPham", new { id_save = @item.id_save })">@item.name_save</a></td>
+                <td>@item.number</td>
+            </tr>
+        }
+    </tbody>
+</table>
