@@ -1,0 +1,12 @@
+﻿@if (@ViewBag.PercentSave > 0)
+{
+    <p style="color:#ffffff; background-color:#70fa05"><b>-@ViewBag.PercentSave %</b></p>
+}
+else if (@ViewBag.IdSave > 1)
+{
+    <p style="color:#ffffff; background-color:#70fa05"><b>Khuyến mãi</b></p>
+}
+else
+{
+    <p style="height:15px"></p>
+}

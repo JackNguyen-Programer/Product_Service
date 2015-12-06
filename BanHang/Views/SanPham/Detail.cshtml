@@ -1,0 +1,36 @@
+﻿@model BanHang.Models.Product
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="center_title_bar" style="font-size:15px">@Html.DisplayFor(model => model.name)</div>
+
+<div class="cart_box">
+    <p><img src="@("https://jacknguyenstorage.blob.core.windows.net/storageqlbh/" + Model.image)" width="250" height="247" border="1" style="float:left" /> </p>
+    <div class="detail">
+        <p><b>Hãng:</b>@Model.manufacturer</p></br>
+        <p> <b>Cấu Hình: </b>@Model.product_info</p></br>
+    @{if (Model.number == 0)
+    {
+        <p> <b>Số Lượng: </b> Het hang </p>}
+    else
+    {<p> <b>Số Lượng: </b> @Model.number </p>}
+    }
+    </br>
+        <p>  <b>Giảm giá: 
+            </b><span style="color:#0026ff; font-size:16px">
+                    <a href="@Url.Action("SaveDetail", "SanPham", new { id_save = @Model.id_save })">
+                        @Model.name_save
+                        </a>
+                </span>
+        </p><br />
+    <p>  <b>Giá bán: </b><span style="color:#F00; font-size:22px"> @Model.sale_price</span></p></br>
+    @if (Request.IsAuthenticated && Model.number > 0)
+    {
+        using (Html.BeginForm("AddToCart", "DonHang", new { maSP = Model.id }))
+        {
+            <input type="image" src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/cart-1.gif" height="30" value="AddToCart" alt="Add to cart" />}
+    }
+</div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model BanHang.ServiceProduct.product
+
+@{
+    ViewBag.Title = "SearchBox";
+}
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#submitButton").on("click", function (e) {
+            var ten = $("#tensp").val();
+            if (ten == "" || ten == "Tên sản phẩm") {
+                e.preventDefault();
+                alert("Bạn phải nhập tên sản phẩm");
+            }
+        });
+    });
+</script>
+<div class="title_box">Tìm kiếm</div>
+<div class="border_box">
+
+    @using (Html.BeginForm("SearchResult", "SanPham", FormMethod.Get))
+    {
+
+        <input type="text" id="tensp" name="ten" style="width:120px;margin-bottom:10px; margin-top:10px; height:20px" value="Tên sản phẩm" onclick="this.value = '' " />
+
+        <input type="submit" id="submitButton" style="height:26px;margin-bottom:10px; margin-left:3px" value="Tìm" />
+
+    }
+
+
+</div>

@@ -1,0 +1,31 @@
+﻿@model BanHang.Models.Save
+@{
+    ViewBag.Title = "SaveDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="cart_box_save_detail">
+    <table width="516" id="rounded-corner" style="text-align:center;margin-top:5px">
+        <tr><th height="35px"><h3>@Model.name</h3></th></tr>
+        <tr>
+            <td align="center">
+                <p style="align-content:center">
+                    <a href="@Url.Action("ProductSave", "SanPham", new { page = 1, id_save = @Model.id })">
+                        <img src="@("https://jacknguyenstorage.blob.core.windows.net/storageqlbh/" + Model.image)" width="400" height="100" border="1" style="clear:both" />
+                    ></a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>               
+                @{
+                    Html.RenderAction("SaveDetail_Day", new { id_save = @Model.id });
+                    }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>@Model.content</p>
+            </td>
+        </tr>
+    </table>
+</div>

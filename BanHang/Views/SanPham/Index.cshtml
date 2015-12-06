@@ -1,0 +1,58 @@
+﻿@model PagedList.IPagedList<BanHang.Models.Product>
+@using PagedList;
+@using PagedList.Mvc;
+@Styles.Render("~/Content/PagedList.css")
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="center_title_bar" style="font-size:15px">Sản phẩm </div>
+@foreach (var item in Model)
+{
+
+    <div class="prod_box">
+        <div class="top_prod_box"></div>
+        <a href="@Url.Action("Detail", new {id= item.id })">
+            <div class="center_prod_box">
+                @*@if (item.save > 0) { 
+                    <p style="color:#ffffff; background-color:#70fa05"><b>-@item.save %</b></p>
+                }
+                else if (item.id_save > 1)
+                {
+                    <p style="color:#ffffff; background-color:#70fa05"><b>Khuyến mãi</b></p>
+                }
+                else
+                {
+                    <p style="height:15px"></p>
+                }*@
+                @{Html.RenderAction("SaveIcon", new { id_save = item.id_save, percent = item.save });}
+
+                <div class="product_title">@Html.DisplayFor(model => item.name)</div>
+                <div class="product_img"><img src="@("https://jacknguyenstorage.blob.core.windows.net/storageqlbh/" + item.image)" alt="" border="0" height="110" /></div>
+                <div class="prod_price"><span class="price">@Html.DisplayFor(model => item.sale_price)</span></div>
+
+                @if (Request.IsAuthenticated)
+                {
+                    if (item.number > 0)
+                    {
+                        using (Html.BeginForm("AddToCart", "DonHang", new { maSP = item.id }))
+                        {
+                            <input type="image" id="submit" src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/cart-1.gif" value="AddToCart" alt="Add to cart" />}
+                    }
+
+                    else
+                    {<img src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/Images/hethang.gif" style="height:25px" />}
+                }
+            </div>
+        </a>
+    </div>
+
+
+}
+
+<div class="pagination">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { ViewBag.hangsx, ViewBag.ten, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+</div>
+

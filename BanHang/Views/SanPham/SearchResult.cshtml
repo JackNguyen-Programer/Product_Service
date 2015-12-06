@@ -1,0 +1,48 @@
+﻿@model PagedList.IPagedList<BanHang.Models.Product>
+@using PagedList;
+@using PagedList.Mvc;
+@Styles.Render("~/Content/PagedList.css")
+
+@{
+    ViewBag.Title = "Search";
+}
+
+
+<div class="center_title_bar" style="font-size:15px">Sản phẩm </div>
+
+@{if (Model.Count != 0)
+{
+    foreach (var item in Model)
+    {
+
+        <div class="prod_box">
+            <div class="top_prod_box"></div>
+            <a href="@Url.Action("Detail", new {id= item.id })">
+                <div class="center_prod_box" style="border:1px #999999 dashed ">
+                    <p>-@item.save %</p>
+                    <div class="product_title">@Html.DisplayFor(model => item.name)</div>
+
+
+
+                    <div class="product_img"><img src="@("https://jacknguyenstorage.blob.core.windows.net/storageqlbh/" + item.image)" alt="" border="0" height="110" /></div>
+                    <div class="prod_price"><span class="price">@Html.DisplayFor(model => item.sale_price)</span></div>
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("AddToCart", "DonHang", new { maSP = item.id }))
+                        {<input type="image" src="https://jacknguyenstorage.blob.core.windows.net/storageqlbh/cart-1.gif" value="AddToCart" alt="Add to cart" />}
+                    }
+                </div>
+            </a>
+        </div>
+
+    }
+
+    <div class="pagination">
+        @Html.PagedListPager(Model, page => Url.Action("SearchResult", new { ViewBag.ten, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+    </div>}
+else
+{
+    <p style="font-size:30px;width:520px;height:30px;margin:10px 0 0  12px;margin-top:70px">Không tìm thấy sản phẩm</p>
+}
+}
+

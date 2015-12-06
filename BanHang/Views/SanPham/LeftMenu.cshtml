@@ -1,0 +1,7 @@
+﻿@model IEnumerable<BanHang.ServiceManufacturer.manufacturer>
+ @foreach (var item in Model)
+ {
+     <li class="even"><a href= @Url.Action("Index", "SanPham", new { hangsx = item.name, page = 1 }) >@item.name</a></li>   
+ }
+ 
+
